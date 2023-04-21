@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width,intial scale=1.0 ">
+        <title>Happy Eid</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: #234652;
+                animation: animate 25s linear infinite;
+            }
+            @keyframes animate{
+                0%{
+                    background-position: 0;
+                }
+                100%{
+                    background-position: 100%;
+                }
+            }
+            .container{
+                position: relative;
+                width: 100%;
+                height: 640px;
+                overflow: hidden;
+            }
+            h2{
+                font-size: 7em;
+                color: #fff;
+                font-family:'Times New Roman', Times, serif;
+                position:absolute;
+                right: 150px;
+            }
+            .center{
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .moon{
+                position: relative;
+                width:150px;
+                height: 150px;
+                background:#fff;
+                border-radius: 50%;
+            }
+            .moon:before{
+                content: "";
+                position:absolute;
+                top: -15px;
+                right: -15px;
+                background:#234652;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            .moon:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -325px; 
+                width: 400px;
+                height: 100%;
+                border-radius: 50%;
+                background: linear-gradient(to left,rgba(0,0,0,4)0%,rgba(0,0,0,0)100%);
+                transform-origin:right;
+                transform: rotate(-45deg);
+                z-index:-2;
+            }
+            .cloud{
+                position: absolute;
+                top: -100px;
+                left: -300px;
+                background: #fff;
+                width: 300px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            .cloud span{
+                position: absolute;
+                background: #fff;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                display:block;
+            }
+            .cloud span:nth-child(1){
+                top: -50px;
+                left: 30px;
+            }
+            .cloud span:nth-child(2){
+                top: -30px;
+                left: 140px;
+            }  
+            .cloud span:nth-child(3){
+                top: -80px;
+                left: 80px;
+            }  
+            .cloud:after{
+                content: '';
+                position: absolute;
+                width: 560px;
+                height: 240px;
+                background: linear-gradient(to left,rgba(0,0,0,4)0%,rgba(0,0,0,0)100%);
+                transform-origin:right;
+                transform: rotate(-45deg);
+                z-index:-2;
+                top: -100px;
+                left: -368px;
+            }
+            .cloud2{
+                top:150px;
+                left:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Eid al-Fitr</h2>
+            <div class="center">
+                <div class="moon"></div>
+                <div class="cloud">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cloud cloud2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>  
+                </div>
+            </div>
+        </div>
+    </body>
+</html>        
